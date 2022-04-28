@@ -2,7 +2,9 @@ import pygame
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-bg = (255, 255, 255)
+bg = pygame.image.load('icon/Bg.png')
+
+bg = pygame.transform.scale (bg, (bg.get_width()//1.8, bg.get_height()//1.8))
 
 class Player(pygame.sprite.Sprite):
     right = True
@@ -94,7 +96,7 @@ class Level(object):
 		self.platform_list.update()
 
 	def draw(self, screen):
-		screen.fill(bg)
+		screen.blit(bg, (0, 0))
 
 		self.platform_list.draw(screen)
 
@@ -124,8 +126,8 @@ def main():
 	screen = pygame.display.set_mode(size)
 
 	pygame.display.set_caption("Vocatio")
-	# icon = pygame.image.load('icon/ico.png')
-	# pygame.display.set_icon(icon)
+	icon = pygame.image.load('icon/ico.png')
+	pygame.display.set_icon(icon)
 
 	player = Player()
 
@@ -185,4 +187,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-	# asdfasgsfdkghjb;sldifkhjg;asd
