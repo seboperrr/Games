@@ -4,7 +4,7 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 bg = pygame.image.load('icon/Bg.png')
 
-bg = pygame.transform.scale (bg, (bg.get_width()//1.8, bg.get_height()//1.8))
+bg = pygame.transform.scale(bg, (bg.get_width()//1.8, bg.get_height()//1.8))
 
 class Player(pygame.sprite.Sprite):
     right = True
